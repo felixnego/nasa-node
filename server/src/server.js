@@ -6,7 +6,7 @@ import { loadPlanetsData } from "./models/planets.model.js";
 import morgan from "morgan";
 
 
-const app = express();
+export const app = express();
 
 app.use(cors());
 app.use(morgan("combined"));
