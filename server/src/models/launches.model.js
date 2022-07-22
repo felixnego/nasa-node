@@ -29,3 +29,16 @@ export function addNewLaunch(launch) {
         flightNumber: latestFlightNumber,
     }));
 }
+
+export function existsLaunch(id) {
+    return launches.has(id)
+}
+
+export function deleteLaunch(id) {
+    // do not delete data
+    const aborted = launches.get(id);
+    aborted.upcoming = false;
+    aborted.success = false;
+
+    return aborted;
+}
